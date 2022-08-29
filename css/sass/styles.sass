@@ -22,11 +22,18 @@ button
 	background: none
 h1,h2,h3
 	font-family: 'Readex Pro', sans-serif
+	font-weight: 500
 	margin: 0
 	padding: 0
 h1
 	font-size: 58px
+h2
+	font-size: 42px
+h3
+	font-size: 32px
 p
+	margin: 0
+	padding: 0
 	font-size: 16px
 .container
 	max-width: 1400px
@@ -49,13 +56,34 @@ header
 		padding: 0 33px 0 0
 		&:last-of-type
 			padding: 0
-.header_buttons
+.header_buttons_block
+	display: flex
 	li
 		padding: 0 13px 0 0
 		&:last-of-type
 			padding: 0
-.promo
-
+.burger
+	display: none
+	width: 35px
+	height: 23px
+	margin-left: 13px
+	position: relative
+	span,&:after,&:before
+		content: ''
+		height: 3px
+		box-sizing: border-box
+		border: 1px solid #000
+		border-radius: 20px
+		width: 100%
+		display: block
+		background-color: black
+		position: absolute
+	span
+		top: 10px
+	&:after
+		bottom: 0px
+	&:before
+		top: 0px
 .promo_container
 	position: relative
 	display: flex
@@ -64,8 +92,6 @@ header
 	position: absolute
 	top: 48%
 	padding: 0 18px
-	&:first-of-type
-		left: 0
 	&:last-of-type
 		right: 0
 .promo_text-content
@@ -74,7 +100,7 @@ header
 	flex-direction: column
 	justify-content: center
 	p
-		padding: 0 0 5px 0
+		padding: 20px 0 20px 0
 .promo_text-content_link
 	padding: 14px 0
 	a
@@ -82,4 +108,117 @@ header
 		border: 1px solid #000
 		border-radius: 30px
 		padding: 14px 53px
+.categories
+	margin: 75px 0 0 0
+	h3
+		font-size: 32px
+.categories_container
+	text-align: center
+.categories_text-content
+	p
+		width: 45%
+		font-family: 'Readex Pro', sans-serif
+		padding-top: 9px
+		margin: 0 auto
+		font-size: 14px
+	margin: 0 auto
+.categories_blocks
+	margin-top: 56px
+	display: flex
+.cat_blocks_horiz
+	display: flex
+.cat_block_horiz
+	height: 792px
+	width: 312px
+	display: flex
+	flex-direction: column
+	justify-content: center
+.cat_block_horiz_1
+	margin: 0 16px
+.cat_block
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4)
+.cat_blocks_vert
+	width: 54%
+.cat_block_vert-text
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	text-align: right
+.cat_block_horiz_1_text
+	padding-top: 42px
+.cat_block_horiz_2_text
+	padding-bottom: 42px
+.cat_block_vert
+	padding: 0 42px
+	width: 86%
+.cat_block_vert_2
+	margin-top: 72px
+	display: flex
+	justify-content: flex-end
+	align-items: center
 
+
+
+@media(max-width: 1384px)
+	.categories_blocks
+		flex-wrap: wrap
+		justify-content: center
+		display: flex
+		align-items: flex-start
+		width: 100%
+		justify-content: center
+	.cat_blocks_vert
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+	.cat_block_vert
+		width: 60%
+	.cat_blocks_horiz
+		margin-top: 42px
+		justify-content: center
+		width: 100%
+	.cat_block_horiz
+		margin-left: 0
+		padding: 0
+@media(max-width: 1217px)
+	.promo_container
+		flex-wrap: wrap
+		text-align: center
+		justify-content: center
+		padding-top: 30px
+	.arrow_left
+		left: 0
+
+@media(max-width: 935px)
+	.categories_blocks
+		img
+			width: 100%
+	.cat_blocks_horiz
+		flex-wrap: wrap
+		width: 67%
+	.cat_block_horiz
+		margin: 0 0 10px 0
+@media(max-width: 747px)
+	.burger
+		display: block
+	.header_nav
+		display: none
+	.promo_img
+		img
+			width: 100%
+	.categories_blocks
+		width: 100%
+@media(max-width: 570px)
+	h1
+		font-size: 32px
+	h2
+		font-size: 26px
+	h3
+		font-size: 10px
+	.promo_text-content_link
+		a
+			font-size: 16px
+			padding: 12px 50px
+	.p_arrow
+		top: 44%
