@@ -108,13 +108,14 @@ header
 		border: 1px solid #000
 		border-radius: 30px
 		padding: 14px 53px
-.categories
+.categories,.items
 	margin: 75px 0 0 0
 	h3
 		font-size: 32px
 .categories_container
 	text-align: center
-.categories_text-content
+.text-content
+	text-align: center
 	p
 		width: 45%
 		font-family: 'Readex Pro', sans-serif
@@ -156,8 +157,24 @@ header
 	display: flex
 	justify-content: flex-end
 	align-items: center
-
-
+.items_list
+	display: flex
+	justify-content: space-between
+.items_item
+	width: 20%
+	height: 39.5ex
+	margin-top: 56px
+	h3
+		font-size: 22px
+	p
+		font-size: 14px
+		padding: 9px 0 8px 0
+	p.item_info
+		height: 6ex
+	p.item_price
+		font-size: 18px
+.item_text-content
+	padding-top: 33px 
 
 @media(max-width: 1384px)
 	.categories_blocks
@@ -189,8 +206,20 @@ header
 		padding-top: 30px
 	.arrow_left
 		left: 0
+	.items_list_block
+		text-align: center
+	.items_list
+		flex-wrap: wrap
+	.items_item
+		width: 50%
+		p.item_info
+			margin: 0 auto
+			width: 60%
 
 @media(max-width: 935px)
+	.text-content
+		p
+			width: 80%
 	.categories_blocks
 		img
 			width: 100%
@@ -199,6 +228,8 @@ header
 		width: 67%
 	.cat_block_horiz
 		margin: 0 0 10px 0
+	.cat_blocks_vert
+		
 @media(max-width: 747px)
 	.burger
 		display: block
@@ -209,6 +240,12 @@ header
 			width: 100%
 	.categories_blocks
 		width: 100%
+	.items_item
+		width: 100%
+		p.item_info
+			margin: 0 auto
+			width: 70%
+
 @media(max-width: 570px)
 	h1
 		font-size: 32px

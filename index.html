@@ -8,6 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Readex+Pro&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -58,7 +59,7 @@
 		<section class="categories">
 			<div class="container">
 				<div class="categories_container">
-					<div class="categories_text-content">
+					<div class="categories_text-content text-content">
 						<h2>Shop our latest offers and categories</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</div>
@@ -106,6 +107,71 @@
 					</div>
 				</div>
 			</div>
+		</section>
+		<section class="items">
+			<div id="itemsVue">
+			<div class="container">
+				<div class="items_container">
+					<div class="items_text-content text-content">
+						<h2>Save on our most selled items.</h2>
+						<p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
+					</div>
+					<div class="items_list_block">
+						<ul class="items_list">
+							<li v-for="item in items" class="items_item">
+								<img :src='item.img' class="item_img">
+								<div class="item_text-content">
+									<h3 class="item_title">{{item.title}}</h3>
+									<p class="item_info">{{item.info}}</p>
+									<p class="item_price"><span class="price_span">$</span> {{item.price}} <span class="price_span">USD</span></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+			<script>
+				let itemsVue = new Vue({
+					el:'#itemsVue',
+					data:{
+						items:[
+							{
+								id:1,
+								title:'Macbook Pro 13',
+								name:'Macbook',
+								img:'img/iMacbook.png',
+								info:'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet',
+								price: 1200,
+								company: 'Apple'
+							},
+							{
+								id:2,
+								title:'Smart Galaxy Watch 3',
+								name:'Watch',
+								img:'img/iWatch.png',
+								info:'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+								price: 199,},
+							{
+								id:3,
+								title:'MacBook Air M1',
+								name:'Macbook',
+								img:'img/iMacbook_2.png',
+								info:'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+								price: 1009,
+							},
+							{
+								id:4,
+								title:'iPad',
+								name:'iPad',
+								img:'img/iPad.png',
+								info:'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+								price: 610,},
+
+						]
+					},
+				})
+			</script>
 		</section>
 	</main>
 	<footer></footer>
