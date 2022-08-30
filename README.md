@@ -1,1 +1,2 @@
-# Apple-store with Vue.
+# Apple-store.
+Shop witch Vue.js IN PROGRESS...
