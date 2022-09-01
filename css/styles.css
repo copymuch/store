@@ -23,7 +23,8 @@ button {
   padding: 0;
   outline: none;
   border: none;
-  background: none; }
+  background: none;
+  cursor: pointer; }
 
 h1, h2, h3 {
   font-family: "Readex Pro", sans-serif;
@@ -127,7 +128,7 @@ header {
     border-radius: 30px;
     padding: 14px 53px; }
 
-.categories, .items, .best, .ideas {
+.categories, .items, .best, .ideas, .thing {
   margin: 75px 0 0 0; }
 
 .categories h3, .items h3 {
@@ -200,7 +201,7 @@ header {
 
 .items_item {
   width: 20%;
-  height: 39.5ex;
+  height: 45ex;
   margin-bottom: 16px; }
   .items_item h3 {
     font-size: 22px; }
@@ -247,6 +248,97 @@ header {
     width: 90%;
     font-size: 24px;
     margin-top: 23px; }
+
+input {
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 100px; }
+  input::placeholder {
+    font-size: 14px;
+    color: black; }
+
+.search_form {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  height: 58px;
+  max-width: 650px;
+  display: flex;
+  background-color: #F8F9FA;
+  border: 1px solid #C5C5C5;
+  border-radius: 100px;
+  box-sizing: border-box; }
+  .search_form button {
+    position: absolute;
+    left: 17px;
+    top: 14px; }
+  .search_form input {
+    background-color: #F8F9FA;
+    margin-left: 65px;
+    width: 85%;
+    outline: none; }
+
+.thing_search_block {
+  margin: 0 auto; }
+
+.thing_search-list {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 18px;
+  width: 40%;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .thing_search-list li {
+    font-size: 14px;
+    margin-left: 7px;
+    margin-bottom: 7px;
+    text-align: center;
+    padding: 12px 22px;
+    border: 1px solid #C5C5C5;
+    border-radius: 100px; }
+
+.thing_sign {
+  margin: 60px auto 0 auto;
+  text-align: center;
+  width: 65%;
+  background-color: #DCE5E2;
+  padding: 55px 0 43px 0; }
+  .thing_sign p {
+    width: 100%;
+    font-size: 16px; }
+
+.thing_sign_title {
+  padding-bottom: 14px; }
+
+.thing_sign_form_block {
+  width: 100%;
+  margin: 14px auto 0 auto; }
+
+.thing_sign_form {
+  margin: 0 auto;
+  position: relative;
+  max-width: 400px;
+  width: 73%;
+  height: 50px;
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 50px; }
+  .thing_sign_form input {
+    margin-left: 32px;
+    background: none;
+    border: none;
+    width: 64.5%; }
+  .thing_sign_form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    font-size: 14px;
+    height: 50px;
+    padding: 0 32px;
+    background-color: black;
+    border-radius: 0 50px 50px 0; }
 
 @media(max-width: 1384px) {
   .categories_blocks {
@@ -321,7 +413,10 @@ header {
     text-align: center;
     width: 100%; }
     .ideas_text-content p {
-      width: 100%; } }
+      width: 100%; }
+
+  .thing_search-list {
+    width: 60%; } }
 @media(max-width: 935px) {
   .title-content p {
     width: 80%; }
@@ -342,7 +437,10 @@ header {
 
   .best_list_item {
     width: 100%;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+
+  .search_form {
+    width: 100%; } }
 @media(max-width: 747px) {
   .burger {
     display: block; }
@@ -360,7 +458,10 @@ header {
     width: 100%; }
     .items_item p.item_info {
       margin: 0 auto;
-      width: 70%; } }
+      width: 70%; }
+
+  .thing_search-list {
+    width: 100%; } }
 @media(max-width: 570px) {
   h1 {
     font-size: 32px; }
@@ -389,7 +490,10 @@ header {
   .ideas_text-content p {
     width: 90%;
     margin: 18px auto 0 auto;
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .thing_sign {
+    width: 100%; } }
 @media(max-width: 375px) {
   .promo_text-content {
     padding: 0 7px; }

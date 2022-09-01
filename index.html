@@ -245,6 +245,93 @@
 				</div>
 			</div>
 		</section>
+		<section class="thing">
+			<div class="container">
+				<div class="thing_container">
+					<div class="thing_title title-content">
+						<h2>Looking for anything else?</h2>
+					</div>
+					<div class="thing_search_block">
+						<div class="thing_search_form">
+							<form action="" method="get" class="search_form">
+								<input placeholder="Search keyword" type="search">
+								<button type="submit"><img src="img/tSearch.svg" alt="Search"></button>
+							</form>
+						</div>
+						<div class="thing_search-list_block">
+							<div id="thing_search_vue">
+								<ul class="thing_search-list">
+									<li v-for="searchItem in searchItems">
+								    	{{searchItem.name}}
+							    	</li>
+							    </ul>
+						    </div>
+							<script>
+								let searchItem = new Vue({
+									el:'#thing_search_vue',
+									data:{
+										searchItems:[
+										    {
+										    	id:1,
+										    	name:'iPhone'
+										    },
+										    {
+										    	id:2,
+										    	name:'Charger'
+										    },
+										    {
+										    	id:3,
+										    	name:'Gift'
+										    },
+										    {
+										    	id:4,
+										    	name:'Google Pixel 3'
+										    },
+										    {
+										    	id:5,
+										    	name:'Keyboard'
+										    },
+										    {
+										    	id:6,
+										    	name:'13 Pro Max'
+										    },
+										    {
+										    	id:7,
+										    	name:'iPhone 12'
+										    },
+										    {
+										    	id:8,
+										    	name:'Laptop'
+										    },
+										    {
+										    	id:9,
+										    	name:'Mobile'
+										    }
+
+										]
+									}
+								})
+							</script>
+						</div>
+					</div>
+					<div class="thing_sign">
+						<div class="thing_sign_title title-content">
+							<h2>Never miss a thing</h2>
+							<p>Sign up for texts to be notified about our best offers on the perfect gifts.</p>
+						</div>
+						<div class="thing_sign_img">
+							<img src="img/signImg.svg" alt="Apple">
+						</div>
+						<div class="thing_sign_form_block">
+							<form action="" method="get" class="thing_sign_form">
+								<input type="e-mail" placeholder="Your email">
+								<button type="submit">Sign up</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer>///</footer>
 </body>
