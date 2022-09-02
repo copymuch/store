@@ -36,6 +36,8 @@ p
 	margin: 0
 	padding: 0
 	font-size: 16px
+.move
+	transition: all .2s ease
 .container
 	max-width: 1400px
 	width: 100%
@@ -57,6 +59,13 @@ header
 		padding: 0 33px 0 0
 		&:last-of-type
 			padding: 0
+	a,select
+		border-bottom: 1px solid rgba(200, 216, 210 ,0)
+		&:hover
+			box-sizing: border-box
+			transition: all .2s ease
+			border-bottom: 1px solid rgba(200, 216, 210, 1)
+			color: #C8D8D2
 .header_buttons_block
 	display: flex
 	li
@@ -92,7 +101,6 @@ header
 .promo_container
 	position: relative
 	display: flex
-	background-color: #DCE5E2
 .p_arrow
 	position: absolute
 	top: 48%
@@ -106,6 +114,7 @@ header
 	justify-content: center
 	p
 		padding: 20px 0 20px 0
+
 .promo_text-content_link
 	padding: 14px 0
 	a
@@ -173,6 +182,8 @@ header
 	display: flex
 	justify-content: flex-end
 	align-items: center
+.items_list_block
+	position: relative
 .items_list
 	display: flex
 	justify-content: space-between
@@ -195,7 +206,23 @@ header
 		border-radius: 10px
 		transition: all .2s ease
 .item_text-content
-	padding-top: 33px 
+	padding-top: 33px
+.pop
+	position: absolute
+	top: 100px
+	left: 40%
+	padding: 100px 100px
+	border-radius: 50px
+	text-align: center
+	background-color: black
+	button
+		color: white
+		font-size: 26px
+	button.close
+		color: red
+		padding-top: 20px
+		font-size: 16px
+
 .best_list_block
 	ul
 		display: flex
@@ -495,4 +522,3 @@ footer
 		padding: 0
 	.cat_block_horiz_1
 		padding-bottom: 10px
-

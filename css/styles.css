@@ -46,6 +46,9 @@ p {
   padding: 0;
   font-size: 16px; }
 
+.move {
+  transition: all 0.2s ease; }
+
 .container {
   max-width: 1400px;
   width: 100%;
@@ -69,6 +72,13 @@ header {
   padding: 0 33px 0 0; }
   .header_nav_bar li:last-of-type {
     padding: 0; }
+.header_nav_bar a, .header_nav_bar select {
+  border-bottom: 1px solid rgba(200, 216, 210, 0); }
+  .header_nav_bar a:hover, .header_nav_bar select:hover {
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #c8d8d2;
+    color: #C8D8D2; }
 
 .header_buttons_block {
   display: flex; }
@@ -105,8 +115,7 @@ header {
 
 .promo_container {
   position: relative;
-  display: flex;
-  background-color: #DCE5E2; }
+  display: flex; }
 
 .p_arrow {
   position: absolute;
@@ -206,6 +215,9 @@ header {
   justify-content: flex-end;
   align-items: center; }
 
+.items_list_block {
+  position: relative; }
+
 .items_list {
   display: flex;
   justify-content: space-between; }
@@ -231,6 +243,22 @@ header {
 
 .item_text-content {
   padding-top: 33px; }
+
+.pop {
+  position: absolute;
+  top: 100px;
+  left: 40%;
+  padding: 100px 100px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: black; }
+  .pop button {
+    color: white;
+    font-size: 26px; }
+  .pop button.close {
+    color: red;
+    padding-top: 20px;
+    font-size: 16px; }
 
 .best_list_block ul {
   display: flex;
