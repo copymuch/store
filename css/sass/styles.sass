@@ -85,6 +85,10 @@ header
 		bottom: 0px
 	&:before
 		top: 0px
+	&:hover
+		span,&:after,&:before
+			border-color: grey
+			background-color: grey
 .promo_container
 	position: relative
 	display: flex
@@ -109,7 +113,11 @@ header
 		border: 1px solid #000
 		border-radius: 30px
 		padding: 14px 53px
-.categories,.items,.best,.ideas,.thing
+		&:hover
+			color: white
+			background-color: black
+			transition: all .2s ease
+.categories,.items,.best,.ideas,.thing,footer
 	margin: 75px 0 0 0
 .categories,.items
 	h3
@@ -142,6 +150,10 @@ header
 	margin: 0 16px
 .cat_block
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4)
+	&:hover
+		background-color: black
+		color: white
+		transition: all .2s ease
 .cat_blocks_vert
 	width: 54%
 .cat_block_vert-text
@@ -168,6 +180,7 @@ header
 	width: 20%
 	height: 45ex
 	margin-bottom: 16px
+	padding-left: 25px
 	h3
 		font-size: 22px
 	p
@@ -177,6 +190,10 @@ header
 		height: 6ex
 	p.item_price
 		font-size: 18px
+	&:hover
+		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3)
+		border-radius: 10px
+		transition: all .2s ease
 .item_text-content
 	padding-top: 33px 
 .best_list_block
@@ -253,6 +270,11 @@ input
 		padding: 12px 22px
 		border: 1px solid #C5C5C5
 		border-radius: 100px
+		cursor: pointer
+		&:hover
+			background-color: black
+			color: whitesmoke
+			transition: all .2s ease
 .thing_sign
 	margin: 60px auto 0 auto
 	text-align: center
@@ -291,6 +313,24 @@ input
 		padding: 0 32px
 		background-color: black
 		border-radius: 0 50px 50px 0
+footer
+	background-color: #F8F9FA
+	padding: 45px 0
+.footer_container,.footer_links
+	display: flex
+.footer_logo
+	width: 35%
+	p
+		padding-top: 14px
+		width: 80%
+.footer_links
+	justify-content: space-around
+	width: 100%
+	h3
+		font-size: 22px
+	li
+		font-size: 17px
+		padding-top: 14px
 
 
 @media(max-width: 1384px)
@@ -396,6 +436,14 @@ input
 			width: 70%
 	.thing_search-list
 		width: 100%
+	.footer_container
+		flex-wrap: wrap
+	.footer_logo
+		text-align: center
+		width: 100%
+		margin-bottom: 17px
+		p
+			width: 100%
 @media(max-width: 570px)
 	h1
 		font-size: 32px
@@ -424,6 +472,14 @@ input
 			font-size: 18px
 	.thing_sign
 		width: 100%
+	.footer_links
+		flex-wrap: wrap
+		div
+			display: flex
+			justify-content: center
+			width: 50%
+		li
+			display: none
 @media(max-width: 375px)
 	.promo_text-content
 		padding: 0 7px
