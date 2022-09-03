@@ -118,7 +118,7 @@
 					</div>
 					<div class="items_list_block">
 						<ul class="items_list">
-							<li v-for="item in items" class="items_item">
+							<li v-for="item in items" class="items_item" v-if="item" @click="log(item)">
 								<img :src='item.img' class="item_img" :title="item.title">
 								<div class="item_text-content">
 									<h3 class="item_title">{{item.title}}</h3>
@@ -128,11 +128,18 @@
 							</li>
 						</ul>
 						<div class="pop">
-							<button>Buy</button>
-							<p><button class="close">close</button></p>
+							<img ref = 'popImg'>
+							<h3 ref='popTitle'></h3>
+							<p ref='popInfo'></p>
+							<div class="pop_buy_block">
+								<p ref='popPrice' class="pop_price"></p>
+								<button class="pop_card" @click = 'console'>Add to card</button>
+							</div>
+							<button class="close">X</button>
 						</div>
 					</div>
 				</div>
+				<div class="global"></div>
 			</div>
 			</div>
 			<script>
@@ -183,6 +190,17 @@
 
 						]
 					},
+					methods: {
+						log(item) {
+							this.$refs.popImg.src = item.img;
+							this.$refs.popTitle.innerText = item.title;
+							this.$refs.popInfo.innerText = item.info;
+							this.$refs.popPrice.innerText = '$ ' + item.price + ' USD';
+						},
+						console(){
+							console.log('Sucefull!');
+						}
+					}
 				})
 			</script>
 		</section>
