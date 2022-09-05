@@ -51,7 +51,7 @@ p
 	text-align: center
 	background-color: #F8F9FA
 	border: 1px solid #C5C5C5
-	animation: popMove .5s ease
+	animation: popMove .4s ease
 	p
 		width: 70%
 		margin: 0 auto
@@ -96,10 +96,31 @@ p
 	top: 0
 	left: 0
 	z-index: 1
+.message
+	z-index: 2
+	opacity: 1
+	animation: messageMove .4s ease
+	position: fixed
+	top: 0
+	right: 0
+	margin: 10px 10px 0 0
+	padding: 20px 50px
+	border-radius: 20px
+	border: 1px solid #C5C5C5
+	background-color: #F8F9FA
+@keyframes messageMove
+	from
+		opacity: 0
+		top: -100%
+	to
+		opacity: 1
+		top: 0
 @keyframes popMove
 	from
-		left: 0%
+		opacity: 0
+		left: -100%
 	to
+		opacity: 1
 		left: 35%
 .pop_close
 	display: none

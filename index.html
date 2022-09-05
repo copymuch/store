@@ -37,7 +37,7 @@
 				<div class="header_buttons_block">
 					<ul class="header_buttons">
 						<li class="header_button"><button type="submit" class=""><img src="img/hSearch.svg" alt="Search"></button></li>
-						<li class="header_button"><button type="submit" class=""><img src="img/hShop.svg" alt="Shop"></button></li>
+						<li class="header_button"><button type="submit" class=""><img src="img/hShop.svg" alt="Shop"></button><span class="shopCounter"></span></li>
 					</ul>
 					<div class="burger"><span class="burger_span"></span></div>
 				</div>
@@ -145,6 +145,9 @@
 					</div>
 				</div>
 				<div class="global"></div>
+				<div class="message">
+					<p>Sucefull!</p>
+				</div>
 			</div>
 			</div>
 			<script>
@@ -193,7 +196,7 @@
 								stock: 45,
 							},
 
-						]
+						],
 					},
 					methods: {
 						log(item) {
@@ -203,7 +206,7 @@
 							this.$refs.popPrice.innerText = '$ ' + item.price + ' USD';
 						},
 						console(){
-							console.log('Sucefull!');
+							console.log(counter);
 						}
 					}
 				})
