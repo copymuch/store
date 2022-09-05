@@ -9,6 +9,9 @@ let items = document.querySelectorAll('.items_item');
 let close = document.querySelector('.close');
 let gl = document.querySelector('.global');
 let body = document.querySelector('body');
+let burger = document.querySelector('.burger');
+let header = document.querySelector('.header_nav_block');
+
 pop.style.display = 'none';
 bgcolor.style.backgroundColor = '#DCE5E2';
 gl.style.display = 'none';
@@ -41,7 +44,10 @@ items.forEach(function(item){
 
 close.onclick = function(){
 	pop.style.display = 'none';
-	gl.style.display = 'none';
 	body.style.overflowY = 'visible';
+	gl.style.display = 'none';
 }
 
+burger.onclick = function(){
+	burger.classList.toggle('burger_move');
+}

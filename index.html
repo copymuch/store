@@ -8,12 +8,17 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Readex+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+    	new WOW().init();
+	</script>
 </head>
 <body>
 	<header class="header">
 		<div class="container">
-			<div class="header_container">
+			<div class="header_container wow animate__animated animate__fadeInUp">
 				<div class="logo">
 					<img src="img/logo.svg" alt="logo">
 				</div>
@@ -40,7 +45,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="promo">
+		<section class="promo wow animate__animated animate__fadeInUp">
 			<div class="container">
 				<div class="promo_container">
 					<div class="promo_text-content">
@@ -58,13 +63,13 @@
 		</section>
 		<section class="categories">
 			<div class="container">
-				<div class="categories_container">
+				<div class="categories_container wow animate__animated animate__fadeInUp">
 					<div class="categories_title title-content">
 						<h2>Shop our latest offers and categories</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</div>
 					<div class="categories_blocks">
-						<div class="cat_blocks_vert">
+						<div class="cat_blocks_vert wow animate__animated animate__fadeInLeft">
 							<div class="cat_block_vert_1 cat_block_vert cat_block">
 								<div class="cat_block_vert_1_img">
 									<img src="img/cMacbook.png" alt="Macbook">
@@ -84,7 +89,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="cat_blocks_horiz">
+						<div class="cat_blocks_horiz wow animate__animated animate__fadeInRight">
 							<div class="cat_block_horiz_1 cat_block_horiz cat_block">
 								<div class="cat_block_horiz_1_img">
 								    <img src="img/cPhone.png" alt="Iphone">
@@ -111,14 +116,14 @@
 		<section class="items">
 			<div id="itemsVue">
 			<div class="container">
-				<div class="items_container">
+				<div class="items_container wow animate__animated animate__fadeInUp">
 					<div class="items_title title-content">
 						<h2>Save on our most selled items.</h2>
 						<p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
 					</div>
 					<div class="items_list_block">
 						<ul class="items_list">
-							<li v-for="item in items" class="items_item" v-if="item" @click="log(item)">
+							<li v-for="item in items" class="items_item wow animate__animated animate__fadeInUp" v-if="item" @click="log(item)">
 								<img :src='item.img' class="item_img" :title="item.title">
 								<div class="item_text-content">
 									<h3 class="item_title">{{item.title}}</h3>
@@ -206,14 +211,14 @@
 		</section>
 		<section class="best">
 			<div class="container">
-				<div class="best_container">
+				<div class="best_container wow animate__animated animate__fadeInUp">
 					<div class="best_title title-content">
 						<h2>See the best around here</h2>
 						<p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
 					</div>
 					<div class="best_list_block">
 						<ul class="best_list">
-							<li class="best_list_item">
+							<li class="best_list_item wow animate__animated animate__fadeInLeft">
 								<div class="best_list_item_text-content">
 									<p>Smart light bulb pack</p>
 									<h3>Latest and gratest</h3>
@@ -221,7 +226,7 @@
 										<a href="/">Explore</a>
 									</div>
 								</div>
-								<div class="best_list_item_img"><img src="img/bWatch.png" alt="iWatch"></div>
+								<div class="best_list_item_img "><img src="img/bWatch.png" alt="iWatch"></div>
 							</li>
 							<li class="best_list_item">
 								<div class="best_list_item_text-content">
@@ -233,7 +238,7 @@
 								</div>
 								<div class="best_list_item_img"><img src="img/bMacbook.png" alt="Macbook"></div>
 							</li>
-							<li class="best_list_item">
+							<li class="best_list_item wow animate__animated animate__fadeInRight">
 								<div class="best_list_item_text-content">
 									<p>Smart light bulb pack</p>
 									<h3>Every product</h3>
@@ -250,7 +255,7 @@
 		</section>
 		<section class="ideas">
 			<div class="container">
-				<div class="ideas_container">
+				<div class="ideas_container wow animate__animated animate__fadeInUp">
 					<div class="ideas_title title-content">
 						<h2>Ideas have a place here</h2>
 						<p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
@@ -269,12 +274,12 @@
 		</section>
 		<section class="thing">
 			<div class="container">
-				<div class="thing_container">
+				<div class="thing_container wow animate__animated animate__fadeInUp">
 					<div class="thing_title title-content">
 						<h2>Looking for anything else?</h2>
 					</div>
 					<div class="thing_search_block">
-						<div class="thing_search_form">
+						<div class="thing_search_form wow animate__animated animate__bounceInLeft">
 							<form action="" method="get" class="search_form">
 								<input placeholder="Search keyword" type="search">
 								<button type="submit"><img src="img/tSearch.svg" alt="Search"></button>
@@ -357,7 +362,7 @@
 	</main>
 	<footer>
 		<div class="container">
-			<div class="footer_container">
+			<div class="footer_container wow animate__animated animate__fadeInUp">
 				<div class="footer_logo">
 					<img src="img/logo.svg" alt="logo">
 					<p>Sign up for texts to be notified about our best offers on the perfect gifts.</p>

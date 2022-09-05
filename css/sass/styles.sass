@@ -37,8 +37,11 @@ p
 	margin: 0
 	padding: 0
 	font-size: 16px
+.wow
+	visibility: hidden
 .pop
 	z-index: 2
+	display: none
 	position: fixed
 	top: 26%
 	left: 35%
@@ -48,6 +51,7 @@ p
 	text-align: center
 	background-color: #F8F9FA
 	border: 1px solid #C5C5C5
+	animation: popMove .5s ease
 	p
 		width: 70%
 		margin: 0 auto
@@ -92,7 +96,22 @@ p
 	top: 0
 	left: 0
 	z-index: 1
-
+@keyframes popMove
+	from
+		left: 0%
+	to
+		left: 35%
+.pop_close
+	display: none
+//.pop_close
+//	animation: popClose .2s ease
+@keyframes popClose
+	from
+		opacity: 1
+		display: block
+	to
+		opacity: 0
+		display: none
 .move
 	transition: all .2s ease
 .fade
@@ -131,38 +150,13 @@ header
 		padding: 0 13px 0 0
 		&:last-of-type
 			padding: 0
-.burger
-	display: none
-	width: 35px
-	height: 23px
-	margin-left: 13px
-	position: relative
-	span,&:after,&:before
-		content: ''
-		height: 3px
-		box-sizing: border-box
-		border: 1px solid #000
-		border-radius: 20px
-		width: 100%
-		display: block
-		background-color: black
-		position: absolute
-	span
-		top: 10px
-	&:after
-		bottom: 0px
-	&:before
-		top: 0px
-	&:hover
-		span,&:after,&:before
-			border-color: grey
-			background-color: grey
 .promo_container
 	position: relative
 	display: flex
 .p_arrow
 	position: absolute
 	top: 48%
+	cursor: pointer
 	padding: 0 18px
 	&:last-of-type
 		right: 0
@@ -426,6 +420,9 @@ footer
 	.cat_block_horiz
 		margin-left: 0
 		padding: 0
+	.pop
+		width: 40%
+		left: 30%
 @media(max-width: 1217px)
 	.promo_container
 		flex-wrap: wrap
@@ -439,10 +436,12 @@ footer
 	.items_list
 		flex-wrap: wrap
 	.items_item
-		width: 50%
+		width: 42%
+		padding: 0
 		p.item_info
 			margin: 0 auto
 			width: 60%
+			padding-bottom: 20px
 @media(max-width: 1117px)
 	.best_list_block
 		ul
@@ -469,6 +468,9 @@ footer
 			width: 100%
 	.thing_search-list
 		width: 60%
+	.pop
+		width: 50%
+		left: 27%
 @media(max-width: 935px)
 	.title-content
 		p
@@ -490,11 +492,77 @@ footer
 		margin-bottom: 20px
 	.search_form
 		width: 100%
+	.pop
+		width: 60%
+		left: 25%
 @media(max-width: 747px)
 	.burger
+		z-index: 2
 		display: block
-	.header_nav
+		width: 35px
+		height: 23px
+		margin-left: 13px
+		position: relative
+		span,&:after,&:before
+			content: ''
+			height: 3px
+			box-sizing: border-box
+			border: 1px solid #000
+			border-radius: 20px
+			width: 100%
+			display: block
+			background-color: black
+			position: absolute
+		span
+			top: 10px
+		&:after
+			bottom: 0px
+		&:before
+			top: 0px
+		&:hover
+			span,&:after,&:before
+				border-color: grey
+				background-color: grey
+	.burger_move
+		body
+			position: fixed
+		&:before
+			transform: rotate(45deg)
+			transition: .2s
+			top: 10px
+		&:after
+			transform: rotate(-45deg)
+			transition: .2s
+			bottom: 10px
+		span
+			opacity: 0
+	.header_nav_block
 		display: none
+		animation: burgerMove .2s ease
+		background-color: rgba(0, 0, 0, 0.8)
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		padding: 85% 0
+		ul
+			text-align: center
+			display: block
+			flex-wrap: wrap
+		li
+			padding: 0
+			margin: 0
+		a,select
+			background: none
+			font-size: 24px
+			color: white
+	@keyframes burgerMove
+		from
+			left: -100%
+		to
+			left: 0
 	.promo_img
 		img
 			width: 100%
@@ -515,6 +583,9 @@ footer
 		margin-bottom: 17px
 		p
 			width: 100%
+	.pop
+		width: 75%
+		left: 13%
 @media(max-width: 570px)
 	h1
 		font-size: 32px
@@ -551,6 +622,16 @@ footer
 			width: 50%
 		li
 			display: none
+	.pop
+		width: 95%
+		left: 3%
+		top: 15%
+	.pop_buy_block
+		flex-wrap: wrap
+		flex-direction: column
+		margin: 0 auto
+		p
+			margin-bottom: 20px
 @media(max-width: 375px)
 	.promo_text-content
 		padding: 0 7px
